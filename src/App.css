@@ -1,0 +1,448 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  background-color: #f9f9f9; /* Or whatever your page background should be */
+  min-height: 100vh;
+  direction: rtl;
+}
+/* Force full height layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body, html, #root {
+  background: white; /* ⚠️ This might be showing through */
+}
+/* App layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+
+
+
+.hero {
+ 
+  background-color: white; 
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin-left: -8%;
+  margin-right: auto;
+  text-align: right;
+  padding-right: 40px; /* Adds space from the right edge */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #1bacd4;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #4fd2f7;
+  transform: scale(1.05);
+  outline: none;
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid #ffcc00;
+  outline-offset: 3px;
+}
+
+.content-section {
+  padding: 40px 20px;
+  background-color: #e9ecef;
+  text-align: right;
+}
+
+.content-section h2 {
+  margin-bottom: 20px;
+}
+
+.content-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-section li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.form-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: right;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-section button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background-color: #1e7e34;
+}
+
+.footer {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
+}
+
+.article-info {
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0 5px;
+  justify-content: flex-start;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  direction: rtl;
+}
+
+.sticky-button-container {
+  position: sticky;
+  top: 200px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-inline-start: 75px;
+}
+
+.hero-image img {
+  max-height: 500px;
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.bottom-cta-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.bottom-cta-container .cta-button {
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
+  display: inline-block;
+}
+
+.size_button {
+  padding: 1rem 10.5rem;
+  margin-left: -30%;
+}
+
+.highlight-text {
+  background-color: #8cd1b8;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+.back-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column-reverse;
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .hero-image img {
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .sticky-button-container {
+    position: static;
+    margin-inline-start: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .size_button {
+    padding: 1rem 4rem;
+    margin-left: 0;
+  }
+
+  .bottom-cta-container .cta-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-button,
+  .back-button,
+  .form-section button {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  .form-section {
+    padding: 20px 10px;
+  }
+
+  .form-section input {
+    font-size: 0.9rem;
+  }
+
+  .article-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .size_button {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 1068px) {
+  .sticky-button-container {
+    display: none;
+  }
+}
+
+/* Center image in responsive mode */
+@media (max-width: 1068px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* Center the article info on smaller screens */
+@media (max-width: 1068px) {
+  .article-info {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* RTL Form Styling */
+.form-page-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  direction: rtl;
+}
+
+.form-page-container h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.form-page-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-page-container label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-page-container input[type="text"],
+.form-page-container input[type="tel"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-input .prefix {
+  background-color: #eee;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.form-page-container button {
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-page-container button:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive form adjustments */
+@media (max-width: 600px) {
+  .form-page-container {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .form-page-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .form-page-container input[type="text"],
+  .form-page-container input[type="tel"] {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .phone-input .prefix {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .form-page-container button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}

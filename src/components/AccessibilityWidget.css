@@ -1,0 +1,45 @@
+/* AccessibilityWidget.css */
+
+.access-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  direction: rtl;
+  font-family: Arial, sans-serif;
+}
+
+.access-toggle {
+  background: #007acc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.access-panel {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.access-panel button {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* High contrast mode */
+.high-contrast,
+.high-contrast * {
+  background-color: black !important;
+  color: yellow !important;
+  border-color: yellow !important;
+}
